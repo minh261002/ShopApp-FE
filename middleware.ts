@@ -10,5 +10,23 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+    if (pathname === '/doi-mat-khau') {
+        const url = request.nextUrl.clone();
+        url.pathname = '/auth/doi-mat-khau';
+        return NextResponse.rewrite(url);
+    }
+
+    if (pathname === '/quen-mat-khau') {
+        const url = request.nextUrl.clone();
+        url.pathname = '/auth/quen-mat-khau';
+        return NextResponse.rewrite(url);
+    }
+    
+    if (pathname === '/dang-ky') {
+        const url = request.nextUrl.clone();
+        url.pathname = '/auth/dang-ky';
+        return NextResponse.rewrite(url);
+    }
+
   return NextResponse.next();
 }
