@@ -10,6 +10,7 @@ import ReactQueryProvider from "@/components/layouts/Provider";
 import Footer from "@/components/layouts/Footer";
 import HeaderMain from "@/components/layouts/HeaderMain";
 import HeaderTop from "@/components/layouts/HeaderTop";
+import HeaderBottom from "@/components/layouts/HeaderBottom";
 
 export default function RootLayout({
   children,
@@ -48,12 +49,12 @@ export default function RootLayout({
             <HeaderTop />
             <div
               className={`transition-all duration-300 ${
-                scrolled ? "slide-down" : ""
+                scrolled ? "slide-down shadow-lg" : ""
               }`}
             >
               <HeaderMain />
-              {/* <HeaderBottom /> */}
             </div>
+            <HeaderBottom />
           </div>
           <main className="flex flex-col">
             <div className="flex-1 flex flex-col">{children}</div>
