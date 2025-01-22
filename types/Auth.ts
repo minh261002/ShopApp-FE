@@ -5,6 +5,8 @@ export type Auth = {
 };
 
 export type LoginResponse = {
+    status: number;
+    message: string;
     user: Auth;
     access_token: string;
     token_type: string;

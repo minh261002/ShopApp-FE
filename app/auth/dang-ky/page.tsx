@@ -16,6 +16,7 @@ import {
   FacebookLoginButton,
   GoogleLoginButton,
 } from "react-social-login-buttons";
+import { HttpStatus } from "@/constants/httpStatus";
 
 const RegisterPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -43,11 +44,16 @@ const RegisterPage = () => {
     try {
       setLoading(true);
       const response = await handleRegister(payload);
-      if (response) {
+      if (response?.status === HttpStatus.OK) {
         login(response);
         showToast("Đăng ký thành công", "success");
 
         router.push("/");
+      } else {
+        showToast(
+          response?.message ? response.message : "Đăng ký không thành công",
+          "error"
+        );
       }
       setLoading(false);
     } catch (error) {
@@ -146,6 +152,11 @@ const RegisterPage = () => {
               type={showConfirmPassword ? "text" : "password"}
               id="password_confirmation"
               className="w-full h-11 duration-300"
+              {...register("password_confirmation", {
+                required: "Vui lòng nhập lại mật khẩu",
+                validate: (value) =>
+                  value === watch("password") || "Mật khẩu không trùng khớp",
+              })}
               tabIndex={4}
             />
             <button

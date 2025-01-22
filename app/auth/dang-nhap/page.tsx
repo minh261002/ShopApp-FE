@@ -17,6 +17,7 @@ import {
   FacebookLoginButton,
   GoogleLoginButton,
 } from "react-social-login-buttons";
+import { HttpStatus } from "@/constants/httpStatus";
 
 const LoginPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -36,16 +37,21 @@ const LoginPage = () => {
       const response = await handleLogin(payload);
 
       if (response) {
-        login(response);
-        showToast("Đăng nhập thành công", "success");
+        if (response.status == HttpStatus.OK) {
+          login(response);
+          showToast("Đăng nhập thành công", "success");
 
-        const redirectUrl = new URLSearchParams(window.location.search).get(
-          "redirect"
-        );
-        if (redirectUrl) {
-          router.push(`/${redirectUrl}`);
+          const redirectUrl = new URLSearchParams(window.location.search).get(
+            "redirect"
+          );
+          if (redirectUrl) {
+            router.push(`/${redirectUrl}`);
+          } else {
+            router.push("/");
+          }
         } else {
-          router.push("/");
+          setLoading(false);
+          showToast(response?.message, "error");
         }
       } else {
         showToast("Thông tin đăng nhập không chính xác", "error");
