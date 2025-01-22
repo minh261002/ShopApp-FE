@@ -74,12 +74,11 @@ const HomeFlashSale = () => {
                         key={product.id}
                         image={product.image}
                         name={product.name}
-                        price={product.min_price}
-                        sale_price={product.min_sale_price}
+                        price={product.price}
+                        sale_price={product.sale_price}
                         slug={product.slug}
                         frame_image={item.image ? item.image : undefined}
                         discount={item.discount ? item.discount : undefined}
-                        quantity={item.quantity ? item.quantity : undefined}
                         sold={item.sold ? item.sold : undefined}
                       />
                     ))}

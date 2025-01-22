@@ -158,7 +158,6 @@ const BoxProduct = ({
           {sale_price ? (
             <>
               <span className="text-[0.9rem] line-through text-gray-500 mr-2">
-                {/* {price.toLocaleString()} đ */}
                 {formatPrice(price)}
               </span>
               {formatPrice(sale_price)}
@@ -168,19 +167,9 @@ const BoxProduct = ({
           )}
         </p>
 
-        {quantity && (
-          <div className="w-full bg-gray-200 h-6 rounded-full relative mt-6">
-            <div
-              className="bg-red-500 h-6 rounded-full"
-              style={{
-                width: `${(sold ? (sold ?? 0) / (quantity ?? 1) : 0) * 100}%`,
-              }}
-            ></div>
-            <span className="inline-block absolute top-0 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
-              Đã bán: {sold ?? 0}/{quantity ?? 0}
-            </span>
-          </div>
-        )}
+        <span className="inline-block absolute top-0 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
+          Đã bán: {sold ?? 0}
+        </span>
       </div>
 
       {is_new && (

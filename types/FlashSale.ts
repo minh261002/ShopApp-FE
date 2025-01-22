@@ -20,7 +20,6 @@ export type Product = {
   name: string;
   slug: string;
   image: string;
-  min_price: number;
-  max_price: number;
-  min_sale_price: number;
+  price: number;
+  sale_price: number;
 };
