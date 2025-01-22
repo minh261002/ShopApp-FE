@@ -137,3 +137,57 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.header-bg {
+  background-image: url("https://res.cloudinary.com/doy3slx9i/image/upload/v1735367674/Pengu/banner-top_ux8rup.png");
+  background-color: rgb(201, 32, 39);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: 14px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  color: #333;
+}
+
+.swiper-home {
+  overflow: hidden;
+}
+
+.bg-pc {
+  background-image: url("https://res.cloudinary.com/doy3slx9i/image/upload/v1735367387/Pengu/bg_newyear_pc_ixphqp.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-detail {
+  background-image: url("https://res.cloudinary.com/doy3slx9i/image/upload/v1735367387/Pengu/bg-detail_v59h8k.webp");
+  background-size: "cover";
+  background-position: "center";
+}
+
+.slide-down {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 30;
+  transition: transform 0.3s ease-out;
+  animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
