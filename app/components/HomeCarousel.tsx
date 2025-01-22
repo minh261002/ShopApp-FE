@@ -39,8 +39,8 @@ const HomeCarousel = () => {
   return (
     <>
       {isLoading ? (
-        <div className="w-full h-[600px] flex items-center justify-center">
-          <Skeleton className="w-full h-[600px]" />
+        <div className="w-full h-[600px] flex items-center justify-center bg-red-400">
+          <Skeleton className="w-full h-[600px] bg-red-400" />
         </div>
       ) : (
         <div className="w-full max-w-[1280px] px-10 md:px-0 relative">
@@ -60,9 +60,10 @@ const HomeCarousel = () => {
                       <Image
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-[300px] md:h-[600px] object-cover rounded-xl"
+                        className="w-full h-[300px] md:h-[600px] object-cover rounded-md"
                         width={1280}
                         height={600}
+                        unoptimized
                       />
                     </Link>
                   </CarouselItem>
