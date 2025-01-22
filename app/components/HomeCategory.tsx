@@ -23,9 +23,13 @@ const HomeCategory = () => {
 
   return (
     <>
-      <h1 className="text-balance text-center mb-5 text-2xl font-bold tracking-tight text-red-700 sm:text-md">
-        HÔM NAY MUA GÌ
-      </h1>
+      <div className="flex items-center justify-center gap-4 mb-5">
+        <Image src="/icon.svg" width={24} height={24} alt="icon" />
+        <h1 className="text-balance text-center text-2xl font-bold tracking-tight text-red-700 sm:text-md">
+          HÔM NAY MUA GÌ
+        </h1>
+        <Image src="/icon.svg" width={24} height={24} alt="icon" />
+      </div>
       {isLoading ? (
         <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
           {Array.from({ length: 8 }).map((_, index) => (

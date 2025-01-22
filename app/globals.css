@@ -105,6 +105,7 @@ body {
   background-image: url("https://res.cloudinary.com/doy3slx9i/image/upload/v1735367387/Pengu/bg-detail_v59h8k.webp");
   background-size: "cover";
   background-position: "center";
+  z-index: 1;
 }
 
 .slide-down {

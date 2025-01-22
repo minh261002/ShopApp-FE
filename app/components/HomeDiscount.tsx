@@ -6,6 +6,7 @@ import type { Discount } from "@/types/Discount";
 import { Skeleton } from "@/components/ui/skeleton";
 import Error from "@/components/layouts/Error";
 import { useState } from "react";
+import Image from "next/image";
 
 const HomeDiscount = () => {
   const [copyDiscount, setCopyDiscount] = useState<string | null>(null);
@@ -33,9 +34,13 @@ const HomeDiscount = () => {
 
   return (
     <div>
-      <h1 className="text-balance text-center mb-5 text-2xl font-bold tracking-tight text-red-700 sm:text-md">
-        MÃ GIẢM GIÁ HOT
-      </h1>
+      <div className="flex items-center justify-center gap-4 mb-5">
+        <Image src="/icon.svg" width={24} height={24} alt="icon" />
+        <h1 className="text-balance text-center text-2xl font-bold tracking-tight text-red-700 sm:text-md">
+          Mã giảm giá hot
+        </h1>
+        <Image src="/icon.svg" width={24} height={24} alt="icon" />
+      </div>
 
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
