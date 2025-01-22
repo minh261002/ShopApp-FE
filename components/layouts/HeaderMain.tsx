@@ -11,7 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-// import ShoppingCart from "@/components/ShoppingCart";
+import ShoppingCart from "./ShoppingCart";
 // import UserInfo from "@/components/UserInfo";
 import Image from "next/image";
 
@@ -45,7 +45,7 @@ const HeaderMain = () => {
               <Link href={"/"}>
                 <PackageSearchIcon size={30} />
               </Link>
-              {/* <ShoppingCart /> */}
+              <ShoppingCart />
               {/* <UserInfo /> */}
             </div>
           </div>
