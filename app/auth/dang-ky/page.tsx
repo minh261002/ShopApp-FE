@@ -185,7 +185,7 @@ const RegisterPage = () => {
 
         <div className="form-group mb-1">
           <Button
-            className="w-full h-11"
+            className="w-full h-11 text-lg font-semibold"
             variant={"default"}
             disabled={loading}
           >
