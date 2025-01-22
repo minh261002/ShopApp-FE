@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, Suspense, useState } from "react";
-import { Inter } from "next/font/google";
+import { useEffect, useState } from "react";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -11,8 +10,6 @@ import ReactQueryProvider from "@/components/layouts/Provider";
 import Footer from "@/components/layouts/Footer";
 import HeaderMain from "@/components/layouts/HeaderMain";
 import HeaderTop from "@/components/layouts/HeaderTop";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -45,7 +42,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ReactQueryProvider>
           <div className="relative">
             <HeaderTop />

@@ -1,58 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-App-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-App-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-App-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-Book.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-App-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-App-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Airbnb";
-  src: url('/fonts/Airbnb-Cereal-App-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
-  font-family: "Airbnb", sans-serif !important;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 
 
