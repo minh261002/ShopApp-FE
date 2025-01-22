@@ -14,6 +14,7 @@ import {
 import ShoppingCart from "./ShoppingCart";
 // import UserInfo from "@/components/UserInfo";
 import Image from "next/image";
+import UserInfo from "./UserInfo";
 
 const HeaderMain = () => {
   return (
@@ -46,7 +47,7 @@ const HeaderMain = () => {
                 <PackageSearchIcon size={30} />
               </Link>
               <ShoppingCart />
-              {/* <UserInfo /> */}
+              <UserInfo />
             </div>
           </div>
 
