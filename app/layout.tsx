@@ -42,7 +42,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="bg-detail">
         <ReactQueryProvider>
           <div className="relative">
             <HeaderTop />

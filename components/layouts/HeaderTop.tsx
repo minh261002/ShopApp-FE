@@ -50,7 +50,7 @@ const HeaderTop = () => {
                 <span className="text-xs md:text-md text-white uppercase font-semibold">
                   Vũ trụ sale lớn nhất trong năm
                 </span>
-                <span className="font-light text-white">
+                <span className="font-normal text-white">
                   {"<< Xem ngay >>"}
                 </span>
               </Link>
@@ -63,7 +63,7 @@ const HeaderTop = () => {
                 <span className="text-xs md:text-md text-white uppercase font-semibold">
                   Cơ hội cuối rinh giày thể thao chỉ 499K
                 </span>
-                <span className="font-light text-white">
+                <span className="font-normal text-white">
                   {"<< Xem ngay >>"}
                 </span>
               </Link>
@@ -76,7 +76,7 @@ const HeaderTop = () => {
                 <span className="text-xs md:text-md text-white uppercase font-semibold">
                   Đừng bỏ lỡ ưu đãi giảm 30% độc quyền
                 </span>
-                <span className="font-light text-white">
+                <span className="font-normal text-white">
                   {"<< Xem ngay >>"}
                 </span>
               </Link>
