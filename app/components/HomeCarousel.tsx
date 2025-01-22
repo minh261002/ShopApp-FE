@@ -45,6 +45,7 @@ const HomeCarousel = () => {
       ) : (
         <div className="w-full max-w-[1280px] px-10 md:px-0 relative">
           <Carousel
+            opts={{ loop: true }}
             ref={emblaRef}
             plugins={[Autoplay({ delay: 5000 })]}
             className="embla__carousel"

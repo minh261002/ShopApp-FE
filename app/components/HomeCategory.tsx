@@ -23,7 +23,7 @@ const HomeCategory = () => {
 
   return (
     <>
-      <h1 className="text-balance text-center mb-5 text-2xl font-semibold tracking-tight text-red-700 sm:text-md">
+      <h1 className="text-balance text-center mb-5 text-2xl font-bold tracking-tight text-red-700 sm:text-md">
         HÔM NAY MUA GÌ
       </h1>
       {isLoading ? (
