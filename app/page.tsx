@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import HomeCarousel from "./components/HomeCarousel";
+import HomeCategory from "./components/HomeCategory";
 
 export async function generateMetadata(context: any): Promise<Metadata> {
   return {
@@ -14,6 +15,9 @@ const HomePage = () => {
     <div className="w-full max-w-[1280px] mx-5 md:mx-auto">
       <div className="my-10">
         <HomeCarousel />
+      </div>
+      <div className="my-10">
+        <HomeCategory />
       </div>
     </div>
   );

@@ -39,8 +39,8 @@ const HomeCarousel = () => {
   return (
     <>
       {isLoading ? (
-        <div className="w-full h-[600px] flex items-center justify-center bg-red-400">
-          <Skeleton className="w-full h-[600px] bg-red-400" />
+        <div className="w-full h-[600px] flex items-center justify-center bg-red-200">
+          <Skeleton className="w-full h-[600px] bg-red-200" />
         </div>
       ) : (
         <div className="w-full max-w-[1280px] px-10 md:px-0 relative">
