@@ -62,7 +62,7 @@ const LoginPage = () => {
     <div className="w-full max-w-[600px] mx-5 md:mx-auto my-10">
       <h1 className="text-2xl font-semibold text-center">Đăng nhập</h1>
 
-      <form className="flex flex-col gap-5" onSubmit={handleSubmit(onSubmit)}>
+      <form className="flex flex-col gap-1" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group mb-3">
           <Label htmlFor="email" className="block mb-2 text-md">
             Email
@@ -75,6 +75,7 @@ const LoginPage = () => {
               required: "Vui lòng nhập email",
               pattern: { value: /^\S+@\S+$/i, message: "Email không hợp lệ" },
             })}
+            tabIndex={1}
           />
           {errors.email && (
             <span className="text-red-500">{errors.email.message}</span>
@@ -97,6 +98,7 @@ const LoginPage = () => {
                   message: "Mật khẩu phải có ít nhất 6 ký tự",
                 },
               })}
+              tabIndex={2}
             />
             <button
               type="button"
