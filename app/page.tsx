@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import HomeCarousel from "./components/HomeCarousel";
 import HomeCategory from "./components/HomeCategory";
+import HomeDiscount from "./components/HomeDiscount";
 
 export async function generateMetadata(context: any): Promise<Metadata> {
   return {
@@ -18,6 +19,9 @@ const HomePage = () => {
       </div>
       <div className="my-10">
         <HomeCategory />
+      </div>
+      <div className="my-10">
+        <HomeDiscount />
       </div>
     </div>
   );
